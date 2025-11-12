@@ -1,17 +1,37 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Aileron';
+  src: url('asset/aileron.regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Avant Garde Pro';
+  src: url('asset/ITCAvantGardePro-Bk.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   min-height: 100%;
 }
 
 body {
-  font-family: 'Bitter', Georgia, Times, sans-serif;
-  background-image: url('bg.png');
+  font-family: 'Aileron', 'Bitter', Georgia, Times, sans-serif;
+  background-image: url('asset/bg.jpg');
   background-repeat: repeat;
   background-position: top left;
   background-attachment: fixed;
   min-height: 100%;
 }
 
-h1 {margin: 2em;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ITC Avant Garde Pro', 'Aileron', sans-serif;
+  margin: 2em;
+}
 .pswp__caption__center {text-align: center;}
 
 .logo-container {
@@ -20,8 +40,8 @@ h1 {margin: 2em;}
 }
 
 .logo {
-  max-width: 150px;
-  width: auto;
+  width: 50%;
+  max-width: 50%;
   height: auto;
   display: inline-block;
 }
@@ -29,30 +49,63 @@ h1 {margin: 2em;}
 /* Responsive logo sizing */
 @media (max-width: 768px) {
   .logo {
-    max-width: 120px;
+    width: 50%;
+    max-width: 50%;
   }
 }
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 100px;
+    width: 60%;
+    max-width: 60%;
   }
 }
 
 @media (max-width: 320px) {
   .logo {
-    max-width: 80px;
+    width: 70%;
+    max-width: 70%;
   }
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  clear: both;
+}
+
 figure {
-  display: inline-block;
-  width: 33.333%;
-  float: left;
+  flex: 0 0 calc(33.333% - 10px);
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+  float: none;
+  display: block;
+}
+
+figure a {
+  display: block;
+  width: 100%;
 }
 
 figure img {
   width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive gallery layout */
+@media (max-width: 768px) {
+  figure {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  figure {
+    flex: 0 0 calc(100% - 10px);
+  }
 }
 
 .spacer {height: 5em;}
