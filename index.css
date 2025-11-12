@@ -1,10 +1,58 @@
-body {font-family: 'Bitter', Georgia, Times, sans-serif;}
-    h1 {margin: 2em;}
-    .pswp__caption__center {text-align: center;}
-    figure {
-      display: inline-block;
-      width: 33.333%;
-      float: left;
-    }
-    img {width: 100%;}
-    .spacer {height: 5em;}
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Bitter', Georgia, Times, sans-serif;
+  background-image: url('bg.png');
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+h1 {margin: 2em;}
+.pswp__caption__center {text-align: center;}
+
+.logo-container {
+  margin: 2em 0 1em 0;
+  text-align: center;
+}
+
+.logo {
+  max-width: 150px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    max-width: 80px;
+  }
+}
+
+figure {
+  display: inline-block;
+  width: 33.333%;
+  float: left;
+}
+
+figure img {
+  width: 100%;
+}
+
+.spacer {height: 5em;}
